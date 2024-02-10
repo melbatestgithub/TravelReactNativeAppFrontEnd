@@ -15,6 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import axios from "axios";
 import { UseDispatch, useDispatch } from "react-redux";
 import { setUser, clearUser } from "../redux/userSlice";
+import config from '../config/config'
 // import jwt from "react-native-jwt"
 export default function LoginScreen() {
   const navigation = useNavigation();
