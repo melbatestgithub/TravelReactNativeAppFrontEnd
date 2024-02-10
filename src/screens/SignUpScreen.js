@@ -15,6 +15,7 @@ import { useNavigation } from "@react-navigation/native";
 import { useDispatch } from "react-redux";
 import { setUser } from "../redux/userSlice";
 import axios from "axios";
+import config from '../config/config'
 
 export default function SignUpScreen() {
   const navigation = useNavigation();
@@ -38,7 +39,7 @@ export default function SignUpScreen() {
       }
 
       const response = axios.post(
-        "http://192.168.48.15:6500/api/v1/auth/register",
+        `${config.apiUrl}/auth/register`,
         { username, email, password }
       );
       const user = response.data;
